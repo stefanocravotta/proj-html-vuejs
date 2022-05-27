@@ -1,6 +1,6 @@
 <template>
   <header>
-      <div class="container d-flex justify-content-between">
+      <div class="sc-container d-flex justify-content-between">
         <div class="logo">Logo</div>
         <nav>
             <ul class="d-flex">
@@ -30,10 +30,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/vars";
+@import "../assets/style/mixins";
+@import "../assets/style/utils";
 
 header{
     height: 80px;
     padding: 15px 0;
-    background-color: $sugar-cane;
+    @include debug;
+    
 }
 </style>
