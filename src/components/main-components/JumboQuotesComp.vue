@@ -1,6 +1,11 @@
 <template>
   <div class="jumbotron">
-      Jumbotron Quotes
+      <div class="sc-container d-flex align-items-center justify-content-center flex-column h-100">
+            <div class="py-2">icon</div>
+            <h3 class="py-2">Content</h3>
+            <span class="py-2">linea</span>
+            <h5 class="py-2">aurhtor</h5>
+      </div>
     </div>
 </template>
 

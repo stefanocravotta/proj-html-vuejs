@@ -1,6 +1,13 @@
 <template>
   <div class="jumbotron">
-      Jumbotron Statistics
+      <div class="sc-container d-flex align-items-center justify-content-center h-100">
+            <div class="row w-100">
+              <div class="col-3">O</div>
+              <div class="col-3">O</div>
+              <div class="col-3">O</div>
+              <div class="col-3">O</div>
+            </div>
+      </div>
     </div>
 </template>
 

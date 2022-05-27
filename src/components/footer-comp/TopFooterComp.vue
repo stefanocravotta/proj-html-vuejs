@@ -1,8 +1,13 @@
 <template>
 
   <div class="top-footer">
-    <div class="sc-container">
-      top footer
+    <div class="sc-container py-3">
+      <div class="row">
+          <div class="col-3">asc</div>
+          <div class="col-3">sfdasf</div>
+          <div class="col-3">saf</div>
+          <div class="col-3">fa</div>
+      </div>
     </div>
   </div>
 </template>

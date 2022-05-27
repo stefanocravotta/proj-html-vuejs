@@ -1,7 +1,8 @@
 <template>
   <div class="view-gallery">
-      <div class="sc-container">
-          View gallery
+      <div class="sc-container h-100 d-flex justify-content-between align-items-center">
+          <h2>See Our K...sa.f?</h2>
+          <button>view gallery</button>
       </div>
   </div>
 </template>

@@ -1,8 +1,14 @@
 <template>
 
-  <div class="bottom-footer">
-    <div class="sc-container">
-      bottom footer
+  <div class="bottom-footer py-3">
+    <div class="sc-container d-flex flex-column align-items-center">
+      <div class="social d-flex">
+        <div class="box-social">scs</div>
+        <div class="box-social">scs</div>
+        <div class="box-social">scs</div>
+        <div class="box-social">scs</div>
+      </div>
+      <div class="copyright">copy</div>
     </div>
   </div>
 </template>
@@ -19,7 +25,6 @@ export default {
 @import "../../assets/style/utils";
 
 .bottom-footer{
-        height: 100px;
         @include debug;
 }
 

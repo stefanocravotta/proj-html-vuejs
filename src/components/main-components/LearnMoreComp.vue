@@ -1,7 +1,8 @@
 <template>
   <div class="learn-more">
-      <div class="sc-container">
-          Learn more
+      <div class="sc-container h-100 d-flex justify-content-between align-items-center">
+          <h2>How to Enroll Your Child to a Class?</h2>
+          <button>LEARN MORE</button>
       </div>
   </div>
 </template>
