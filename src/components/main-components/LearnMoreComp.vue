@@ -1,8 +1,8 @@
 <template>
   <div class="learn-more">
       <div class="sc-container h-100 d-flex justify-content-between align-items-center">
-          <h2>How to Enroll Your Child to a Class?</h2>
-          <button>LEARN MORE</button>
+          <h3>How to Enroll Your Child to a Class?</h3>
+          <button>Learn more <span class="ms-1 "><i class="fa-solid fa-chevron-right"></i></span></button>
       </div>
   </div>
 </template>
@@ -20,6 +20,10 @@ export default {
 
 .learn-more{
         height: 100px;
-        @include debug;
+        background-image: url(../../assets/images/pattern.png);
+        color: $sugar-cane;
+        button{
+            @include buttonPrimary
+        }
 }
 </style>

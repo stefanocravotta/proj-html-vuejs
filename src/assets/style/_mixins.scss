@@ -1,4 +1,16 @@
+@import "./vars";
+
 @mixin debug {
     background-color: rgba(206, 55, 55, 0.575);
     border: 1px solid black;
+}
+
+@mixin buttonPrimary {
+    border: 1px solid $sugar-cane;
+    color: $sugar-cane;
+    background-color: transparent;
+    padding: 10px 15px;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
