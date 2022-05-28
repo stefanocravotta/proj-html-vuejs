@@ -1,5 +1,5 @@
 <template>
-    <div class="sc-container top section py-3">
+    <div class="sc-container top section py-5">
           <div class="title text-center">
               <h2>Our Classes</h2>
               <p>fable .....</p>
