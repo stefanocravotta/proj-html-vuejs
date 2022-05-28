@@ -69,6 +69,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
         .box-number{
             width: 150px;
             height: 150px;
