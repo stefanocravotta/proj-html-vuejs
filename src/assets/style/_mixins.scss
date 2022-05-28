@@ -14,3 +14,13 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@mixin buttonReadMore {
+    border: none;
+    color: $sugar-cane;
+    background-color: $blaze-orange;
+    padding: 8px 18px;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
