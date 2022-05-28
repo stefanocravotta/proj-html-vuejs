@@ -40,9 +40,10 @@ export default {
 @import "../../assets/style/mixins";
 
 .jumbotron{
-    height: 363px;
+    height: 320px;
     background-color: $bon-jour;
-    border: 1px solid darken($bon-jour, 30%);
+    border-top: 1px solid darken($bon-jour, 30%);
+    overflow-y: hidden ;
 
     img{
         max-width: 100%;
