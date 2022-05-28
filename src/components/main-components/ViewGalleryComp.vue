@@ -1,8 +1,8 @@
 <template>
   <div class="view-gallery">
       <div class="sc-container h-100 d-flex justify-content-between align-items-center">
-          <h2>See Our K...sa.f?</h2>
-          <button>view gallery</button>
+          <h2>See Our Kindergarten Photo Gallery!</h2>
+          <button>view gallery <i class="fa-solid fa-chevron-right mx-1"></i></button>
       </div>
   </div>
 </template>
@@ -20,6 +20,10 @@ export default {
 
 .view-gallery{
         height: 100px;
-        @include debug;
+        background-image: url(../../assets/images/pattern.png);
+        color: $sugar-cane;
+        button{
+            @include buttonPrimary
+        }
 }
 </style>
