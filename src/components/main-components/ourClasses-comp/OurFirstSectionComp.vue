@@ -16,15 +16,15 @@
                 <div class="col-12 px-0">
                     <div class="container-box d-flex flex-wrap ">
                         <div class="box-classes row me-4">
-                                <div class="class col-6 p-3">
-                                    <div class="top-box text-start h-50 pb-4">
+                                <div class="class col-6 p-1">
+                                    <div class="top-box text-start h-50 pb-4 ps-3 pt-3">
                                         <h6 class="m-0">Little Lambs</h6>
                                         <p class="small">Class name</p>
                                     </div>
-                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center">
+                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-2">
-                                            <p class="small">12-24</p>
-                                            <p class="small">Months olds</p>
+                                            <p class="small ">12-24</p>
+                                            <p class="small ">Months olds</p>
                                         </div>
                                         <div class="right-box px-2">
                                             <p class="small">9</p>
@@ -39,12 +39,12 @@
                                 </div>
                         </div>
                         <div class="box-classes row">
-                                <div class="class col-6 p-3">
-                                    <div class="top-box text-start h-50 pb-4">
+                                <div class="class col-6 p-1">
+                                    <div class="top-box text-start h-50 pb-4 ps-3 pt-3">
                                         <h6 class="m-0">Bouncy Bears</h6>
                                         <p class="small">Class name</p>
                                     </div>
-                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center">
+                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-3">
                                             <p class="small">2-3</p>
                                             <p class="small">Year old</p>
@@ -62,12 +62,12 @@
                                 </div>
                         </div>
                         <div class="box-classes row me-4">
-                                <div class="class col-6 p-3">
-                                    <div class="top-box text-start h-50 pb-4">
+                                <div class="class col-6 p-1">
+                                    <div class="top-box text-start h-50 pb-4 ps-3 pt-3">
                                         <h6 class="m-0">Tenderhearts</h6>
                                         <p class="small">Class name</p>
                                     </div>
-                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center">
+                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-3">
                                             <p class="small">3-4</p>
                                             <p class="small">Year olds</p>
@@ -85,12 +85,12 @@
                                 </div>
                         </div>
                         <div class="box-classes row">
-                                <div class="class col-6 p-3">
-                                    <div class="top-box text-start h-50 pb-4">
+                                <div class="class col-6 p-1">
+                                    <div class="top-box text-start h-50 pb-4 ps-3 pt-3">
                                         <h6 class="m-0">Shining Stars</h6>
                                         <p class="small">Class name</p>
                                     </div>
-                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center">
+                                    <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-2">
                                             <p class="small">4-5</p>
                                             <p class="small">Year olds</p>
@@ -153,12 +153,13 @@ export default {
             position: relative;
             img{
                 width: 100%;
+                height: 100%;
             }
             button{
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                @include buttonReadMore
+                @include buttonSecondary
             }
         }
     }

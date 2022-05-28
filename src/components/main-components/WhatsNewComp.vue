@@ -1,17 +1,59 @@
 <template>
   <div class="whats-new">
-      <div class="sc-container text-center py-3">
+      <div class="sc-container text-center py-5">
             <div class="title py-3">
-                <h2>Meet Our Staff</h2>
-                <p>fable .....</p>
-                <span>icon</span>
+                <h2>What's New</h2>
+                <p>Keep up todate with the latest news</p>
+                <img src="../../assets/images/header_divider.png" alt="">
             </div>
-            <div class="row box-blog text-start">
-                <div class="col-4">csc</div>
-                <div class="col-4">csc</div>
-                <div class="col-4">csc</div>
+            <div class="row box-blog text-start py-3">
+                <div class="col-4">
+                    <p>October 03, 2014</p>
+                    <div class="blog-img">
+                        <img src="../../assets/images/blog_09-300x180.jpg" alt="">
+                        <span class="number d-flex align-items-center justify-content-center">42</span>
+                    </div>                   
+                    <h5 class="py-2">Drawing .. . </h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nostrum? <span class="lighten">[...]</span></p>
+                    <div class="bottom d-flex">
+                        <p class="me-2">
+                            <img class="me-2" src="../../assets/images/author.png" alt=""> Anna Brown</p>
+                        <p>
+                            <img class="mx-2" src="../../assets/images/category.png" alt=""> Events, Fun</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <p>October 03, 2014</p>
+                    <div class="blog-img">
+                        <img src="../../assets/images/blog_10-300x180.jpg" alt="">
+                        <span class="number d-flex align-items-center justify-content-center">19</span>
+                    </div>                   
+                    <h5 class="py-2">Fall Parents Meeting Day </h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nostrum? <span class="lighten">[...]</span></p>
+                    <div class="bottom d-flex">
+                        <p class="me-2">
+                            <img class="me-2" src="../../assets/images/author.png" alt=""> Anna Brown</p>
+                        <p>
+                            <img class="mx-2" src="../../assets/images/category.png" alt=""> Dance </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <p>September 20, 2014</p>
+                    <div class="blog-img">
+                        <img src="../../assets/images/blog_08-300x180.jpg" alt="">
+                        <span class="number d-flex align-items-center justify-content-center">22</span>
+                    </div>                   
+                    <h5 class="py-2">Birthday in Kindergarten </h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nostrum? <span class="lighten">[...]</span></p>
+                    <div class="bottom d-flex">
+                        <p class="me-2">
+                            <img class="me-2" src="../../assets/images/author.png" alt=""> Anna Brown</p>
+                        <p>
+                            <img class="mx-2" src="../../assets/images/category.png" alt=""> Games</p>
+                    </div>
+                </div>
             </div>
-            <button>Go to blog</button>
+            <button>Go to blog <i class="fa-solid fa-chevron-right ms-1"></i></button>
       </div>
   </div>
 </template>
@@ -28,11 +70,37 @@ export default {
 @import "../../assets/style/utils";
 
 .whats-new{
-        @include debug;
+         h2,h5{
+            color: $butterfly-bush;
+        }
+        p{
+            color: lighten($tuatara, 30%);
+        }
         .box-blog{
-            height: 200px;
-            @include debug;
-
+            .blog-img{
+                position: relative;
+                 img{
+                width: 100%;
+                }
+            }
+            .number{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                color: $sugar-cane;
+                background-color: $blaze-orange;
+            }
+            .lighten{
+                color: lighten($tuatara, 60%);
+            }
+            .bottom{
+                border-top: 1px solid lighten($tuatara, 60%);
+            }
+        }
+        button{
+            @include buttonSecondary
         }
 }
 </style>
