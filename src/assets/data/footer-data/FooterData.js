@@ -79,5 +79,22 @@ const recentPost = {
         },
     ]
 }
+const bottomData = [
+    {
+        icon : require("../../images/behance.png")
+    },
+    {
+        icon : require("../../images/dribbble.png")
+    },
+    {
+        icon : require("../../images/envato.png")
+    },
+    {
+        icon : require("../../images/facebook.png")
+    },
+    {
+        icon : require("../../images/twitter.png")
+    },
+]
 
-export {aboutUs,archives,ourFeatures,recentPost}
+export {aboutUs,archives,ourFeatures,recentPost,bottomData}

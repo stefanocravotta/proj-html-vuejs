@@ -31,7 +31,6 @@ export default {
 
 .jumbotron{
     height: 500px;
-    @include debug;
     background-image: url(../../assets/images/slider_slide3_background.png);
     background-position-y: bottom;
     background-size: contain;

@@ -8,7 +8,7 @@
 <script>
 import TopFooterComp from './footer-comp/TopFooterComp.vue';
 import BottomFooterComp from './footer-comp/BottomFooterComp.vue';
-import {aboutUs,archives,ourFeatures,recentPost} from "../assets/data/footer-data/topFooterData"
+import {aboutUs,archives,ourFeatures,recentPost} from "../assets/data/footer-data/FooterData"
 export default {
     name: "FooterComp",
     components: { TopFooterComp, BottomFooterComp },
