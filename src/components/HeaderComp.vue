@@ -9,10 +9,14 @@
                 <li 
                 v-for="(item,index) in navData"
                 :key="`nav${index}`"
+                :class="item.isActive ? 'active' : '' "
                  class="p-3 h-100">
-                    <a class="d-flex flex-column align-items-center" href="#">
-                        <img class="mb-2" :src="item.icon" alt="">
-                        <span>{{item.name}}</span>
+                    <a 
+                    @click="toggleActive(item)"
+                    class="d-flex flex-column align-items-center" 
+                    href="#">
+                        <img class="mb-2" :src="!item.isActive ? item.icon : item.activeIcon" :alt="item.name">
+                        <span :class="item.isActive ? 'sugar-cane' : '' ">{{item.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -22,7 +26,7 @@
 </template>
 
 <script>
-import navData from '@/assets/data/navData';
+import navData from '../assets/data/navData';
 
 export default {
     name: "HeaderComp",
@@ -30,6 +34,11 @@ export default {
     data(){
         return{
             navData
+        }
+    },
+    methods: {
+        toggleActive(item){
+        item.isActive = !item.isActive
         }
     }
 }
@@ -49,6 +58,9 @@ header{
     }
     .active{
         background-color: $blaze-orange;
+    }
+    .sugar-cane{
+        color: $sugar-cane;
     }
     a {
         span{
