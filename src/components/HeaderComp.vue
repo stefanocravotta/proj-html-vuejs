@@ -7,7 +7,7 @@
         <nav class="h-100">
             <ul class="d-flex h-100">
                 <li 
-                v-for="(item,index) in navData"
+                v-for="(item,index) in this.navData"
                 :key="`nav${index}`"
                 :class="item.isActive ? 'active' : '' "
                  class="p-3 h-100">
@@ -26,15 +26,13 @@
 </template>
 
 <script>
-import navData from '../assets/data/navData';
+
 
 export default {
     name: "HeaderComp",
 
-    data(){
-        return{
-            navData
-        }
+    props:{
+        navData: Array
     },
     methods: {
         toggleActive(item){

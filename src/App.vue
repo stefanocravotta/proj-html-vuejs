@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderComp />
+    <HeaderComp :navData="navData" />
     <MainComp />
     <FooterComp />
   </div>
@@ -10,6 +10,7 @@
 import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
 import FooterComp from './components/FooterComp.vue';
+import navData from './assets/data/navData';
 
 
 export default {
@@ -18,7 +19,12 @@ export default {
     HeaderComp,
     MainComp,
     FooterComp
-}
+  },
+  data(){
+    return{
+      navData
+    }
+  }
 }
 </script>
 
