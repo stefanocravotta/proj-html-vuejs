@@ -35,18 +35,16 @@
                       <div class="container-fluid">
                           <div class="row">
                                 <div class="col-12 pb-3 large-slide">
-                                  <img class="central" src="../../../assets/images/gallery_01-690x506.jpg" alt="">
-                                  <img class="icon-slider prev" src="../../../assets/images/slider_previous.png" alt="">
-                                  <img class="icon-slider next" src="../../../assets/images/slider_next.png" alt="">
+                                  <img class="central" :src="WelcomeToFableData[counter].image" alt="">
+                                  <img class="icon-slider prev" @click="prevThumbs" src="../../../assets/images/slider_previous.png" alt="">
+                                  <img class="icon-slider next" @click="nextThumbs" src="../../../assets/images/slider_next.png" alt="">
                                 </div>
-                                <div class="col-4 small-slide py-1">
-                                    <img src="../../../assets/images/gallery_07-690x506.jpg" alt="">
-                                </div>
-                                <div class="col-4 small-slide py-1 active">
-                                    <img src="../../../assets/images/gallery_01-690x506.jpg" alt="">
-                                </div>
-                                <div class="col-4 small-slide py-1">
-                                    <img src="../../../assets/images/gallery_08-690x506.jpg" alt="">
+                                <div 
+                                v-for="(slide,index) in WelcomeToFableData"
+                                :key="`welcomeSlides${index}`"
+                                @click="thisThumb(index)"
+                                class="col-4 small-slide py-1">
+                                    <img :src="slide.image" alt="">
                                 </div>
                           </div>
                       </div>
@@ -57,8 +55,38 @@
 </template>
 
 <script>
+import WelcomeToFableData from '@/assets/data/main-data/WelcomeToFableData'
+
 export default {
-    name: "SecondSectionComp"
+    name: "SecondSectionComp",
+        data(){
+        return{
+            WelcomeToFableData,
+            counter: 0
+        }
+    },
+    methods: {
+        thisThumb(index){
+            this.counter = index;
+        },
+        nextThumbs(){
+            this.counter++;
+            if(this.counter > this.WelcomeToFableData.length - 1){
+                this.counter = 0;
+            }
+        },
+        prevThumbs(){
+            this.counter--;
+            if(this.counter < 0){
+                this.counter = this.WelcomeToFableData.length - 1
+            }
+        },
+    },
+    mounted(){
+        setInterval( () => {
+            this.nextThumbs();
+        }, 3000)
+    }
 }
 </script>
 
@@ -126,7 +154,8 @@ export default {
                     border-bottom: 1px solid $blaze-orange;
                 }
                 img{
-                width: 100%;       
+                width: 100%;
+                cursor: pointer ;       
                 }
             }
         }

@@ -60,13 +60,13 @@ const recentPost = {
     title : "RECENT POST",
     posts: [
         {
-        img : require("../../images/blog_10-150x150.jpg"),
+        img : require("../../images/blog_09-150x150.jpg"),
         title : "Drawing and Painting Lessons",
         icon: require("../../images/date_footer.png"),
         date: "10-03-2014"
         },
         {
-        img : require("../../images/blog_09-150x150.jpg"),
+        img : require("../../images/blog_10-150x150.jpg"),
         title : "Fall Parents Meeting Day",
         icon: require("../../images/date_footer.png"),
         date: "10-03-2014"

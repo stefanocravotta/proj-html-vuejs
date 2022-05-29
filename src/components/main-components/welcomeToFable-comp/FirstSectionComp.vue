@@ -44,7 +44,8 @@
 
 <script>
 export default {
-    name: "FirstSectionComp"
+    name: "FirstSectionComp",
+
 }
 </script>
 

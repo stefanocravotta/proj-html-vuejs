@@ -2,7 +2,7 @@
     <div class="sc-container top section py-5">
           <div class="title text-center">
               <h2>Our Classes</h2>
-              <p>fable .....</p>
+              <p>Our preschool program has four dedicated classes</p>
               <img src="../../../assets/images/header_divider.png" alt="">
           </div>
           <div class="container-fluid py-3">
