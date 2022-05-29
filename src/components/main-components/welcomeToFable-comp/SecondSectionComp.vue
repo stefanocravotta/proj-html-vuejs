@@ -4,31 +4,61 @@
               <div class="row">
                   <div class="col-6">
                       <div class="top d-flex">
-                            <div class="choise active">Overview</div>
-                            <div class="choise">Our Mission</div>
+                            <div @click="changeCurrent(0)" :class="current == 0 ? 'active' : '' " class="choise">Overview</div>
+                            <span :class="current == 0 ? 'arrow-down' : '' "></span>
+                            <div @click="changeCurrent(1)" :class="current == 1 ? 'active' : '' " class="choise">Our Mission</div>
+                            <span :class="current == 1 ? 'arrow-down-overview' : '' "></span>
+
                       </div>
-                      <h5 class="py-4">Our philosophy is learning through play as we offer a stimulating environment for children.</h5>
-                      <div class="row">
-                          <div class="col-2">
-                              <span class="icon d-flex align-items-center justify-content-center">
-                                  <img src="../../../assets/images/clock_alt.png" alt="">
-                              </span>
-                          </div>
-                          <div class="col-10">
-                                <h6>Full Day Sessions</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi voluptatem, obcaecati </p>
-                          </div>
+                      <div v-if="this.current == 0" class="overview">
+                          <h5 class="py-4">Our philosophy is learning through play as we offer a stimulating environment for children.</h5>
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="icon d-flex align-items-center justify-content-center">
+                                    <img src="../../../assets/images/clock_alt.png" alt="">
+                                </span>
+                            </div>
+                            <div class="col-10">
+                                    <h6>Full Day Sessions</h6>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi voluptatem, obcaecati </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="icon d-flex align-items-center justify-content-center">
+                                    <img src="../../../assets/images/diagram_alt.png" alt="">
+                                </span>
+                            </div>
+                            <div class="col-10">
+                                    <h6>Varied Classes</h6>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi voluptatem, obcaecati </p>
+                            </div>
+                        </div>
                       </div>
-                      <div class="row">
-                          <div class="col-2">
-                              <span class="icon d-flex align-items-center justify-content-center">
-                                  <img src="../../../assets/images/diagram_alt.png" alt="">
-                              </span>
-                          </div>
-                          <div class="col-10">
-                                <h6>Varied Classes</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi voluptatem, obcaecati </p>
-                          </div>
+                      <div v-else class="overview">
+                          <h5 class="py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam laboriosam ipsam excepturi ea magni autem minima assumenda, sapiente at ducimus cumque aut</h5>
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="icon d-flex align-items-center justify-content-center">
+                                    <img src="../../../assets/images/diagram_alt.png" alt="">
+                                </span>
+                            </div>
+                            <div class="col-10">
+                                    <h6>Varied Classes</h6>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi voluptatem, obcaecati </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="icon d-flex align-items-center justify-content-center">
+                                    <img src="../../../assets/images/clock_alt.png" alt="">
+                                </span>
+                            </div>
+                            <div class="col-10">
+                                    <h6>Full Day Sessions</h6>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi voluptatem, obcaecati </p>
+                            </div>
+                        </div>
                       </div>
                   </div>
                   <div class="slider col-6">
@@ -43,7 +73,9 @@
                                 v-for="(slide,index) in WelcomeToFableData"
                                 :key="`welcomeSlides${index}`"
                                 @click="thisThumb(index)"
-                                class="col-4 small-slide py-1">
+                                class="col-4 small-slide py-1"
+                                :class="{active : isActive(index)}">
+                                
                                     <img :src="slide.image" alt="">
                                 </div>
                           </div>
@@ -61,26 +93,44 @@ export default {
     name: "SecondSectionComp",
         data(){
         return{
+            current: 0,
             WelcomeToFableData,
-            counter: 0
+            counter: 0,
         }
     },
     methods: {
+
+        //DESCRIPTION
+
+        changeCurrent(number){
+            this.current = number
+        },
+
+        //SLIDER
+
         thisThumb(index){
             this.counter = index;
         },
         nextThumbs(){
             this.counter++;
+            this.setActive(this.counter);
             if(this.counter > this.WelcomeToFableData.length - 1){
                 this.counter = 0;
             }
         },
         prevThumbs(){
             this.counter--;
+            this.setActive(this.counter);
             if(this.counter < 0){
                 this.counter = this.WelcomeToFableData.length - 1
             }
         },
+        isActive(index){
+            return this.counter === index;
+        },
+        setActive(index){
+            this.counter = index;
+        }
     },
     mounted(){
         setInterval( () => {
@@ -97,19 +147,54 @@ export default {
 
 .bottom{
         background-color: $bon-jour;
+        .top{
+            position: relative;
+        }
         .choise{
-            width: 90px;
+            width: 100px;
             height: 40px;
+            padding: 0 5px;
             text-align: center;
             line-height: 40px;
             margin-right: 20px;
             color: lighten($tuatara, 40);
             border-bottom: 1px solid lighten($tuatara, 60);
+            cursor: pointer;
             &.active{
             background-color: $blaze-orange;
             color: white;
             border-bottom: none
             }
+        }
+        .arrow-down{
+            border-color: #FE6500;
+            left: 11.5%;
+            width: 0px;
+            height: 0px;
+            bottom: -8px;
+            display: block;
+            margin-left: -8px;
+            position: absolute;
+            border-style: solid;
+            border-width: 8px 8px 0px 8px;
+            border-left-color: transparent !important;
+            border-right-color: transparent !important;
+            border-bottom-color: transparent !important;
+        }
+        .arrow-down-overview{
+            border-color: #FE6500;
+            left: 37.5%;
+            width: 0px;
+            height: 0px;
+            bottom: -8px;
+            display: block;
+            margin-left: -8px;
+            position: absolute;
+            border-style: solid;
+            border-width: 8px 8px 0px 8px;
+            border-left-color: transparent !important;
+            border-right-color: transparent !important;
+            border-bottom-color: transparent !important;
         }
         h5,h6{
             color: $butterfly-bush;
