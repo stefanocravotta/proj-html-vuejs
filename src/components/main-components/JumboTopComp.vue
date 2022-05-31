@@ -50,7 +50,7 @@ export default {
         },
         isActive(number){
             return this.counter === number
-        }
+        },
     },
     mounted(){
         setInterval( () => {

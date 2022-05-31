@@ -12,6 +12,7 @@
       <WhatsNewComp />
       <JumboMapComp />
       <ContactUsComp />
+      <ScrollToTopComp />
   </main>
 </template>
 
@@ -28,10 +29,11 @@ import JumboQuotesComp from './main-components/JumboQuotesComp.vue';
 import WhatsNewComp from './main-components/WhatsNewComp.vue';
 import JumboMapComp from './main-components/JumboMapComp.vue';
 import ContactUsComp from './main-components/ContactUsComp.vue';
+import ScrollToTopComp from './main-components/ScrollToTopComp.vue';
 
 export default {
     name: "MainComp",
-    components: { JumboTopComp, LearnMoreComp, WelcomeToFableComp, JumboStatisticsComp, OurClassesComp, JumboGalleryComp, ViewGalleryComp, MeetOurStaffComp, JumboQuotesComp, WhatsNewComp, JumboMapComp, ContactUsComp }
+    components: { JumboTopComp, LearnMoreComp, WelcomeToFableComp, JumboStatisticsComp, OurClassesComp, JumboGalleryComp, ViewGalleryComp, MeetOurStaffComp, JumboQuotesComp, WhatsNewComp, JumboMapComp, ContactUsComp, ScrollToTopComp }
 }
 </script>
 
