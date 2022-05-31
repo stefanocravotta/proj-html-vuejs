@@ -10,7 +10,7 @@
                 v-for="(item,index) in this.navData"
                 :key="`nav${index}`"
                 :class="item.isActive ? 'active' : '' "
-                 class="p-3 h-100">
+                 class="icon p-3 h-100">
                     <a 
                     @click="toggleActive(item)"
                     class="d-flex flex-column align-items-center" 

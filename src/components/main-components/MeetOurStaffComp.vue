@@ -7,7 +7,7 @@
               <img src="../../assets/images/header_divider.png" alt="">
           </div>
           <div class="container-fluid py-3">
-            <div class="row text-start">
+            <div class="row text-start pb-5">
                 <div class="col-6 px-2">
                     <h5>Our staff consists of three teachers and one assistant with experience in early childhood care.</h5>
                 </div>
@@ -19,7 +19,12 @@
                     <div class="container-box d-flex flex-wrap ">
                         <div class="box-classes row me-4">
                                 <div class="col-6 px-0 image-box text-center">
-                                    <img class="mb-2" src="../../assets/images/team_04.jpg" alt="">
+                                    <div class="container-img">
+                                        <img class="mb-2" src="../../assets/images/team_04.jpg" alt="">
+                                        <div class="overlay align-items-center justify-content-center">
+                                            <img src="../../assets/images/image_overlay.png" alt="">
+                                        </div>
+                                    </div>
                                     <h6>Ruth Richie</h6>
                                     <p>Teacher</p>
                                 </div>
@@ -49,7 +54,12 @@
                         </div>
                         <div class="box-classes row">
                                 <div class="col-6 px-0 image-box text-center">
-                                    <img class="mb-2" src="../../assets/images/team_03.jpg" alt="">
+                                    <div class="container-img">
+                                        <img class="mb-2" src="../../assets/images/team_03.jpg" alt="">
+                                        <div class="overlay align-items-center justify-content-center">
+                                            <img src="../../assets/images/image_overlay.png" alt="">
+                                        </div>
+                                    </div>
                                     <h6>Katie Willmore</h6>
                                     <p>Assistant Teacher</p>
                                 </div>
@@ -79,7 +89,12 @@
                         </div>
                         <div class="box-classes row me-4">
                                 <div class="col-6 px-0 image-box text-center">
-                                    <img class="mb-2" src="../../assets/images/team_02.jpg" alt="">
+                                    <div class="container-img">
+                                        <img class="mb-2" src="../../assets/images/team_02.jpg" alt="">
+                                        <div class="overlay align-items-center justify-content-center">
+                                            <img src="../../assets/images/image_overlay.png" alt="">
+                                        </div>
+                                    </div>
                                     <h6>Angelica Watson</h6>
                                     <p>Lead Teacher</p>
                                 </div>
@@ -110,7 +125,12 @@
                         </div>
                         <div class="box-classes row">
                                 <div class="col-6 px-0 image-box text-center">
-                                    <img class="mb-2" src="../../assets/images/team_01.jpg" alt="">
+                                    <div class="container-img">
+                                        <img class="mb-2" src="../../assets/images/team_01.jpg" alt="">
+                                        <div class="overlay align-items-center justify-content-center">
+                                            <img src="../../assets/images/image_overlay.png" alt="">
+                                        </div>
+                                    </div>
                                     <h6>Angela Lynn</h6>
                                     <p>Teacher</p>
                                 </div>
@@ -169,11 +189,25 @@ export default {
         .box-classes{
             width: calc(100% / 2 - 20px);
             margin: 10px 0;
+            .container-img{
+                position: relative;
+                cursor: pointer;
+                
+                &:hover .overlay{
+                   opacity: 1;
+                }
+            .overlay{
+                @include overlay;
+                img{
+                    width: 30%;
+                }
+            }
+            }
         .class{
             
             .small{
                 margin: 0;
-                font-size: .8rem;
+                font-size: .9rem;
             }
             .right-box{
                 border-left: 1px solid lighten($tuatara, 40%);
@@ -204,6 +238,9 @@ export default {
     .icon {
         background-color: $blaze-orange;
         cursor: pointer;
+        &:hover{
+        background-color: $east-bay;
+        }
         img{
              max-width: 100%;
             }

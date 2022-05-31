@@ -10,7 +10,12 @@
                 <div class="col-4">
                     <p>October 03, 2014</p>
                     <div class="blog-img">
-                        <img src="../../assets/images/blog_09-300x180.jpg" alt="">
+                        <div class="container-img">
+                            <div class="overlay align-items-center justify-content-center">
+                                <img src="../../assets/images/image_overlay.png" alt="">
+                            </div>
+                            <img src="../../assets/images/blog_09-1024x614.jpg" alt="">
+                        </div>
                         <span class="number d-flex align-items-center justify-content-center">42</span>
                     </div>                   
                     <h5 class="py-2">Drawing .. . </h5>
@@ -25,7 +30,12 @@
                 <div class="col-4">
                     <p>October 03, 2014</p>
                     <div class="blog-img">
-                        <img src="../../assets/images/blog_10-300x180.jpg" alt="">
+                        <div class="container-img">
+                            <div class="overlay align-items-center justify-content-center">
+                                <img src="../../assets/images/image_overlay.png" alt="">
+                            </div>
+                            <img src="../../assets/images/blog_10-1024x614.jpg" alt="">
+                        </div>
                         <span class="number d-flex align-items-center justify-content-center">19</span>
                     </div>                   
                     <h5 class="py-2">Fall Parents Meeting Day </h5>
@@ -40,7 +50,12 @@
                 <div class="col-4">
                     <p>September 20, 2014</p>
                     <div class="blog-img">
-                        <img src="../../assets/images/blog_08-300x180.jpg" alt="">
+                        <div class="container-img">
+                            <div class="overlay align-items-center justify-content-center">
+                                <img src="../../assets/images/image_overlay.png" alt="">
+                            </div>
+                            <img src="../../assets/images/blog_08-1024x614.jpg" alt="">
+                        </div>
                         <span class="number d-flex align-items-center justify-content-center">22</span>
                     </div>                   
                     <h5 class="py-2">Birthday in Kindergarten </h5>
@@ -81,6 +96,19 @@ export default {
                 position: relative;
                  img{
                 width: 100%;
+                }
+            }
+            .container-img{
+                position: relative;
+                cursor: pointer;
+                &:hover .overlay{
+                    opacity: 1;
+                }
+                .overlay{
+                    @include overlay;
+                    img{
+                        width: 30%;
+                    }
                 }
             }
             .number{

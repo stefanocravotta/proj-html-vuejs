@@ -44,7 +44,7 @@
                 <img :src="post.img" :alt="post.title">
               </div>
               <div class="w-50 ps-2">
-                <p>{{post.title}}</p>
+                <a class="post-title">{{post.title}}</a>
                 <p><img class="me-1" :src="post.icon" :alt="post.title">{{post.date}}</p>
               </div>
             </div>
@@ -97,6 +97,19 @@ export default {
           color: lighten($tuatara, 50%);
           font-size: .9rem;
           font-weight: bold;
+          cursor: pointer;
+          &:hover{
+          border: 2px solid $sugar-cane;
+          color: $sugar-cane;
+          }
+        }
+        .post-title{
+          color: $sugar-cane;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover{
+          text-decoration: underline;
+          }
         }
 }
 

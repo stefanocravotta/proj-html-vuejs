@@ -23,11 +23,11 @@
                                     </div>
                                     <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-2">
-                                            <p class="small ">12-24</p>
-                                            <p class="small ">Months olds</p>
+                                            <p class="small number">12-24</p>
+                                            <p class="small">Months olds</p>
                                         </div>
                                         <div class="right-box px-2">
-                                            <p class="small">9</p>
+                                            <p class="small number">9</p>
                                             <p class="small">Class size</p>
                                         </div>                                        
                                     </div>
@@ -46,11 +46,11 @@
                                     </div>
                                     <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-3">
-                                            <p class="small">2-3</p>
+                                            <p class="small number">2-3</p>
                                             <p class="small">Year old</p>
                                         </div>
                                         <div class="right-box px-3">
-                                            <p class="small">12</p>
+                                            <p class="small number">12</p>
                                             <p class="small">Class size</p>
                                         </div>                                        
                                     </div>
@@ -69,11 +69,11 @@
                                     </div>
                                     <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-3">
-                                            <p class="small">3-4</p>
+                                            <p class="small number">3-4</p>
                                             <p class="small">Year olds</p>
                                         </div>
                                         <div class="right-box px-3">
-                                            <p class="small">15</p>
+                                            <p class="small number">15</p>
                                             <p class="small">Class size</p>
                                         </div>                                        
                                     </div>
@@ -92,11 +92,11 @@
                                     </div>
                                     <div class="bottom-box h-50 d-flex align-items-end justify-content-center text-center">
                                         <div class="px-2">
-                                            <p class="small">4-5</p>
+                                            <p class="small number">4-5</p>
                                             <p class="small">Year olds</p>
                                         </div>
                                         <div class="right-box px-2">
-                                            <p class="small">20</p>
+                                            <p class="small number">20</p>
                                             <p class="small">Class size</p>
                                         </div>                                        
                                     </div>
@@ -126,8 +126,11 @@ export default {
 @import "../../../assets/style/utils";
 
 .section{
+    .description{
+        color: lighten($tuatara, 30%);
+    }
     p{
-        color: lighten($tuatara, 50%);
+        color: lighten($tuatara, 60%);
     }
     h2,h5{
         color: $butterfly-bush;
@@ -143,10 +146,14 @@ export default {
             background-color: $butterfly-bush;
             .small{
                 margin: 0;
-                font-size: .8rem;
+                font-size: .9rem;
+                &.number{
+                    color: $sugar-cane;
+                    font-weight: bold;
+                }
             }
             .right-box{
-                border-left: 1px solid lighten($tuatara, 40%);
+                border-left: 1px solid lighten($tuatara, 60%);
             }
         }
         .image-box{

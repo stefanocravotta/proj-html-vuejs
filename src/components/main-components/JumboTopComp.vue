@@ -71,6 +71,9 @@ export default {
     background-size: contain;
     padding-top: 80px;
     position: relative;
+    &:hover button{
+        opacity: 1;
+    }
     .child{
         position: absolute;
         top: 10%;
@@ -83,6 +86,7 @@ export default {
     .slider-choise{
         z-index: 999;
     }
+
     .sc-container{
         height: 90%;
         img{
@@ -95,17 +99,35 @@ export default {
     }
     .rectangular{
             display: inline-block;
-            height: 8px;
-            width: 30px;
+            height: 10px;
+            width: 35px;
             border: 2px solid $blaze-orange;
             cursor: pointer;
             &.active{
                 margin-bottom: 15px;
             }
+            &:hover{
+            border: 2px solid $east-bay;
+            }
         }
     button{
-        @include buttonSecondary;
+        position: absolute;
+        top: 50%;
         padding: 5px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: all .7s;
+        &.next{
+        left: 15px;
+        }
+        &.prev{       
+        right: 15px;
+        }
+        &:hover{
+            background-color: $blaze-orange;
+        }
         img{
             max-width: 30px;
         }

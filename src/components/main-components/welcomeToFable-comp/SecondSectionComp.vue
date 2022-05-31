@@ -232,6 +232,9 @@ export default {
                         right: 12px;
                         bottom: 50%;
                     }
+                &:hover{
+                    background-color: $east-bay;
+                }
                 }
             }
             .small-slide{

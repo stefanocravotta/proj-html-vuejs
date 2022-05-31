@@ -10,7 +10,7 @@
           <a href="#"><img :src="item.icon" alt=""></a>
         </div>
       </div>
-      <div class="copyright">&copy; Fable - Children Kindergarten Boolean Theme by StefanoLab</div>
+      <div class="copyright">&copy; <a href="#">Fable - Children Kindergarten Boolean Theme</a> by <a href="#">StefanoLab</a></div>
     </div>
   </div>
 </template>
@@ -37,13 +37,24 @@ export default {
       width: 40px;
       height: 40px;
       background-color: $blaze-orange;
+      &:hover{
+        background-color: $east-bay;
+      }
     }
     .copyright{
       font-size: .8rem;
       color: lighten($tuatara, 40%);
+      a{
+      color: lighten($tuatara, 40%);
+
+      }
     }
     a{
       cursor: pointer;
+      text-decoration: none;
+      &:hover{
+      text-decoration: underline;
+      }
     }
 }
 
